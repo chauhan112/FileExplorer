@@ -1,8 +1,8 @@
-document.head.querySelector("title")!.textContent = "Hello";
+import "./style.css";
+import { LocalExpController } from "./rlib/timeline/t2025/july/FileExplorer";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-    <div>
-        <h1>Vite + TypeScript + Tailwind CSS</h1>
-        
-    </div>
-`;
+const fe = LocalExpController();
+
+document
+    .querySelector<HTMLDivElement>("#app")!
+    .appendChild(fe.comp.getElement());
